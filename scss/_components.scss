@@ -1,0 +1,73 @@
+// Buttons ===============================================
+.btn {
+  display: inline-block;
+  padding: 0.4em 2em;
+  color: inherit;
+  cursor: poiner;
+
+  &--primary {
+    border: 1px solid $white-color;
+    background-color: transparent;
+    color: $white-color;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: rgba(255, 254, 254, 0.7);
+    }
+  }
+
+  &--main {
+    border: 1px solid $lighter-color;
+    background-color: $dark-color;
+    padding: 0.6em 3em;
+
+    &:hover {
+      background-color: $lighter-color;
+      color: $dark-color;
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $light-color;
+    padding: 0.1em 1em;
+
+    &:hover {
+      background-color: rgba(133, 86, 97, 0.2);
+    }
+  }
+
+  &--send {
+    color: $white-color;
+    background-color: $general-color;
+    border: none;
+    padding: 0.7em 0;
+    font-weight: map-get($font-weights, bold);
+
+    &:hover {
+      filter: brightness(50%);
+    }
+  }
+}
+
+// Form ==================================================
+.form {
+  display: grid;
+  margin: 2em auto 3em;
+
+  input,
+  textarea {
+    color: $accent-color;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: map-get($font-weights, bold);
+    padding: 0.5em 1em;
+    margin: 0.3em 0;
+    background: $white-color;
+    border: none;
+  }
+
+  textarea {
+    resize: none;
+    margin-bottom: 1em;
+  }
+}
