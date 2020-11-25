@@ -1,0 +1,177 @@
+//=====================================================
+//size(width): 650px - 999px
+
+@include media-md {
+  //typography-----------------------------------
+  .text {
+    &--logo {
+      font-size: 2.5rem;
+    }
+
+    &--page-title {
+      font-size: 5rem;
+    }
+
+    &--title {
+      font-size: 1.5rem;
+    }
+  }
+
+  //components(btn, forms, etc)------------------
+  .form {
+    &--main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, min-content);
+      grid-template-areas:
+      "fname email ."
+      "subject subject ."
+      "message message ."
+      "btn-form btn-form .";
+      grid-gap: 0.5em;
+    }
+
+    &__fname {
+      grid-area: fname;
+    }
+
+    &__email {
+      grid-area: email;
+    }
+
+    &__subject {
+      grid-area: subject;
+    }
+
+    .btn--send {
+      grid-area: btn-form;
+    }
+
+    textarea {
+      grid-area: message;
+    }
+  }
+
+  //layout----------------------------------------
+
+  .nav {
+    &__link {
+    padding: 0.5em 1.5em;
+    }
+  }
+
+  .products {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-column-gap: 1em;
+
+    & > * {
+      grid-column: span 1;
+      margin-bottom: 0;
+    }
+  }
+
+  .main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px 250px 400px;
+    grid-template-areas:
+      "text text  img-sm-two img-sm-two"
+      "text text img-sm-two img-sm-two"
+      "img-big img-big promo promo";
+
+    &__info {
+      grid-area: text;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2em;
+      background-color: $white-color;
+    }
+
+    &__image {
+      max-height: 70vh;
+      &--one {
+        display: none;
+        grid-area: img-sm-one;
+      }
+        &--two {
+        display: block;
+        grid-area: img-sm-two;
+      }
+        &--three {
+        grid-area: img-big;
+      }
+    }
+
+    &__promo {
+      grid-area: promo;
+    }
+  }
+
+  .contact-form {
+    background: url(/img/bg-contact-two.jpg)
+                center / cover
+                no-repeat
+                transparent;
+    padding: 2em;
+  }
+
+  .contacts {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-column-gap: 1em;
+
+    & > * {
+      grid-column: span 1;
+    }
+
+    &__subscribe {
+      grid-column: 2/span 2;
+      display: grid;
+    }
+
+    &__social-list {
+      justify-content: start;
+      margin-top: 2em;
+    }
+  }
+}
+
+//=====================================================
+//size(width) -->  1000px and more
+
+@include media-lg {
+  //typography------------------------------------
+  .text {
+    &--promo {
+      font-size: 2.5rem;
+    }
+  }
+
+  //components(btn, forms, etc)-------------------
+  //...
+
+  //layout----------------------------------------
+  .nav {
+    &__link {
+    font-size: 1.25rem;
+    }
+  }
+
+  .main {
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "text text  img-sm-two img-sm-one"
+      "img-big img-big promo promo";
+
+    &__image--one {
+      display: block;
+      grid-area: img-sm-one;
+    }
+  }
+
+  .contacts {
+    padding: 3em 7em 7em;
+  }
+}
