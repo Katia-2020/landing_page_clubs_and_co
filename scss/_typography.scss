@@ -1,0 +1,71 @@
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  color: $light-color;
+  line-height: 1.6;
+  padding: 0 1em;
+  background-color: $bg-color;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+a {
+  @include links;
+  color: inherit;
+}
+
+.text {
+  &--logo {
+    font-size: 1.5rem;
+    color: $white-color;
+  }
+
+  &--page-title {
+    font-weight: map-get($font-weights, regular);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: $white-color;
+  }
+
+  &--page-subtitle {
+    font-weight: map-get($font-weights, regular);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1.9px;
+    color: $white-color;
+  }
+
+  &--title {
+    font-weight: map-get($font-weights, bold);
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 1.9px;
+    color: $light-color;
+  }
+
+  &--promo {
+    text-transform: uppercase;
+  }
+
+  &--underlined::after {
+    content: "";
+    display: block;
+    background-color: $general-color;
+    margin: 0 auto;
+    height: 2px;
+    width: 10px;
+  }
+
+  &--small {
+    font-size: 3rem;
+  }
+
+  &--extra {
+    font-weight: map-get($font-weights, bold);
+  }
+}
