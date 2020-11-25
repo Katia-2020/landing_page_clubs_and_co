@@ -1,0 +1,48 @@
+// Variables ===========================================
+$accent-color: rgb(65, 24, 33);
+$dark-color: rgb(2, 22, 15);
+$general-color: rgb(109, 68, 78);
+$light-color: rgb(133, 86, 97);
+$lighter-color: rgb(173, 114, 128);
+$bg-color: rgb(219, 216, 216);
+$white-color: rgb(241, 241, 241);
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+
+// Reset ===============================================
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Mixins ===============================================
+@mixin u-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+@mixin links {
+  text-decoration: none;
+}
+
+@mixin transition-ease {
+  transition: all 0.25s ease-in-out;
+}
+
+@mixin media-md {
+  @media (min-width: 650px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
