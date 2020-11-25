@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  @include u-list;
+
+  &__link {
+    padding: 0.5em 0.8em;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 60px;
+      background-color: $general-color;
+      left: 50%;
+      transform: translate(-50%);
+      top: 0;
+      opacity: 0;
+    }
+
+    &:hover {
+      color: $accent-color;
+      &::after {
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+      }
+    }
+
+
+  }
+}
