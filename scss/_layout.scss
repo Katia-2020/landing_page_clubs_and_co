@@ -1,0 +1,166 @@
+// Page layout ======================================
+body {
+  > * {
+    margin-bottom: 1.5em;
+  }
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0, 19, 2, 0.4) 0%, rgba(0, 0, 0, 0.5) 90%),
+    url(/img/hero-img.jpg)
+    center /
+    cover no-repeat $dark-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+
+  h2 {
+    margin-bottom: 2em;
+  }
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  > * {
+    height: 40vh;
+    padding-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  &__item {
+    grid-column: 1/-1;
+
+    > :not(:last-child) {
+      margin-bottom: 1em;
+    }
+
+    &--one {
+      background:
+        url(/img/cactus-two.jpg)
+        center / cover no-repeat $general-color;
+    }
+
+    &--two {
+      background:
+        url(/img/plant.jpg)
+        center 30% / cover no-repeat $general-color;
+    }
+
+    &--three {
+      background:
+        url(/img/succulent.jpg)
+        center 50% / cover no-repeat $general-color;
+    }
+  }
+}
+
+.main {
+  display: grid;
+  grid-template:
+    "text" min-content
+    "img-big" 4fr
+    "promo" 2fr
+    / 1fr;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__info {
+    grid-area: text;
+    text-align: left;
+    > :not(:first-child) {
+      margin-bottom: 1.5em;
+    }
+  }
+
+  &__image {
+    &--one {
+      display: none;
+    }
+
+    &--two {
+      display: none;
+    }
+
+    &--three {
+      grid-area: img-big;
+    }
+  }
+
+  &__promo {
+    grid-area: promo;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $dark-color;
+    padding: 1em;
+
+    > :not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $dark-color;
+  color: $lighter-color;
+  padding: 3em 2em 5em;
+  font-size: 0.85rem;
+  text-align: left;
+
+  & > * {
+    margin-bottom: 2em;
+  }
+
+  &__hours {
+    > :last-child {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__subscribe {
+    input {
+      background-color: rgba(50, 161, 122, 0.151);
+      color: $lighter-color;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: map-get($font-weights, bold);
+      padding: 0.5em 1em;
+      margin: 0.3em 0;
+      border: none;
+    }
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3em;
+    @include u-list;
+
+    > :not(:last-child) {
+      margin-right: 1em;
+
+      :hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+footer {
+  font-size: 0.8rem;
+  margin: auto;
+}
