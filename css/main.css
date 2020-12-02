@@ -193,8 +193,8 @@ body > * {
 .main {
   display: -ms-grid;
   display: grid;
-  grid-template: "text" -webkit-min-content "img-big" 4fr "promo" 2fr / 1fr;
-  grid-template: "text" min-content "img-big" 4fr "promo" 2fr / 1fr;
+  grid-template: "text" -webkit-min-content "img-big" 4fr "promo" 2fr / 1fr;
+  grid-template: "text" min-content "img-big" 4fr "promo" 2fr / 1fr;
 }
 
 .main img {
@@ -395,7 +395,7 @@ a {
     -ms-grid-rows: (min-content)[4];
         grid-template-rows: repeat(4, -webkit-min-content);
         grid-template-rows: repeat(4, min-content);
-        grid-template-areas: "fname email ." "subject subject ." "message message ." "btn-form btn-form .";
+        grid-template-areas: "fname email ." "subject subject ." "message message ." "btn-form btn-form .";
     grid-gap: 0.5em;
   }
   .form__fname {
@@ -443,7 +443,7 @@ a {
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: 250px 250px 400px;
         grid-template-rows: 250px 250px 400px;
-        grid-template-areas: "text text  img-sm-two img-sm-two" "text text img-sm-two img-sm-two" "img-big img-big promo promo";
+        grid-template-areas: "text text  img-sm-two img-sm-two" "text text img-sm-two img-sm-two" "img-big img-big promo promo";
   }
   .main__info {
     -ms-grid-row: 1;
@@ -534,7 +534,7 @@ a {
         grid-template-columns: repeat(4, auto);
     -ms-grid-rows: (auto)[2];
         grid-template-rows: repeat(2, auto);
-        grid-template-areas: "text text  img-sm-two img-sm-one" "img-big img-big promo promo";
+        grid-template-areas: "text text  img-sm-two img-sm-one" "img-big img-big promo promo";
   }
   .main__image--one {
     display: block;
