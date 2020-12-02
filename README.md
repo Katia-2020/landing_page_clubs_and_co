@@ -1,4 +1,4 @@
-##Fully responsive landing page using CSS Grid
+## Fully responsive landing page using CSS Grid
 
 ### Description:
 A landing page for a company "Clubs & Co". The page is fully responsive for phone, tablet and desktop sizes using CSS Grid.
