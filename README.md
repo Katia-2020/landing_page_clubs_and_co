@@ -8,7 +8,7 @@ HTML, BEM, SCSS, SCSS mixins, CSS Grid, CSS variables, Mobile first.
 
 ### Demo:
 
-1. Mobile view
+1.Mobile view
 
 ![landing-page-3](https://user-images.githubusercontent.com/66952678/100924017-f6504200-34d7-11eb-8832-036abb4a6a0a.gif)
 
